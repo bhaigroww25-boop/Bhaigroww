@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import logoImg from "@assets/WhatsApp_Image_2026-07-25_at_2.08.17_AM_1784927022564.jpeg";
 import { motion, useInView } from "framer-motion";
 import {
   MessageCircle,
@@ -125,11 +126,12 @@ function Hero() {
 
       {/* Navbar */}
       <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-5">
-        <div
-          className="font-display font-bold text-2xl tracking-tight"
-          style={{ color: "hsl(38 95% 58%)" }}
-        >
-          Bhaigroww
+        <div className="bg-white rounded-lg px-3 py-1.5">
+          <img
+            src={logoImg}
+            alt="Bhaigroww"
+            className="h-9 w-auto object-contain"
+          />
         </div>
         <a
           href={WHATSAPP_URL}
@@ -163,18 +165,18 @@ function Hero() {
         </motion.div>
 
         {/* Brand name */}
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display font-extrabold leading-none tracking-tight mb-4"
-          style={{
-            fontSize: "clamp(4rem, 12vw, 8.5rem)",
-            color: "#fff",
-          }}
+          className="mb-4 bg-white rounded-2xl px-8 py-4"
         >
-          Bhai<span style={{ color: "hsl(38 95% 54%)" }}>groww</span>
-        </motion.h1>
+          <img
+            src={logoImg}
+            alt="Bhaigroww"
+            className="h-28 md:h-40 w-auto object-contain"
+          />
+        </motion.div>
 
         {/* Tagline */}
         <motion.p
@@ -821,8 +823,12 @@ function Footer() {
     >
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <div className="font-display font-bold text-2xl mb-1" style={{ color: "hsl(38 95% 54%)" }}>
-            Bhaigroww
+          <div className="bg-white rounded-lg px-3 py-1.5 inline-block mb-1">
+            <img
+              src={logoImg}
+              alt="Bhaigroww"
+              className="h-9 w-auto object-contain"
+            />
           </div>
           <p className="text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
             Helping local businesses grow with Meta Ads &amp; social media.

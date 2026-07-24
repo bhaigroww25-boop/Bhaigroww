@@ -20,7 +20,7 @@ import {
   Zap,
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "[INSERT_WHATSAPP_NUMBER]";
+const WHATSAPP_NUMBER = "918171706705";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 function WhatsAppButton({

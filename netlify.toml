@@ -1,0 +1,7 @@
+[build]
+  command = "corepack pnpm install --frozen-lockfile && corepack pnpm run build"
+  publish = "dist/public"
+
+[build.environment]
+  BASE_PATH = "/"
+  PORT = "8889"

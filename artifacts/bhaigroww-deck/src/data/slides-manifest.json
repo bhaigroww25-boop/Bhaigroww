@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "position": 1,
+    "filepath": "src/pages/slides/BhaigrowwCover.tsx",
+    "title": "Bhaigroww",
+    "description": "Cover slide introducing Bhaigroww and its two core services.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "position": 2,
+    "filepath": "src/pages/slides/WhatWeDo.tsx",
+    "title": "What We Do",
+    "description": "Overview of Meta Ads Management and Social Media Management services.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+    "position": 3,
+    "filepath": "src/pages/slides/HowItWorks.tsx",
+    "title": "How It Works",
+    "description": "The 3-step process: Free consultation, Custom strategy, Ongoing management.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-defa-234567890123",
+    "position": 4,
+    "filepath": "src/pages/slides/WhyChooseUs.tsx",
+    "title": "Why Local Businesses Choose Us",
+    "description": "Four trust points: personalized service, transparent pricing, hands-on management, results-focused.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-efab-345678901234",
+    "position": 5,
+    "filepath": "src/pages/slides/LetsGrowTogether.tsx",
+    "title": "Let's Grow Together",
+    "description": "Closing CTA slide with WhatsApp contact and free consultation offer.",
+    "speakerNotes": ""
+  }
+]

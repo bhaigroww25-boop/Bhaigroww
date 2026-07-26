@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irisium Technicals | High-Impact Technical Solutions</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #120e0c;
+            --bg-card-dark: #1d1614;
+            --bg-light: #fcfbf9;
+            --bg-card-light: #ffffff;
+            --accent-orange: #ff7e29;
+            --accent-orange-hover: #e56a18;
+            --whatsapp-green: #25d366;
+            --whatsapp-green-hover: #1eb956;
+            --text-light: #f3f3f3;
+            --text-dark: #1c1917;
+            --text-muted: #a19d99;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Nav Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-orange);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-light);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255, 126, 41, 0.4);
+            background: rgba(255, 126, 41, 0.1);
+            color: var(--accent-orange);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-green-hover);
+            transform: translateY(-2px);
+        }
+
+        .social-proof {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Services Section */
+        .light-section {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding: 6rem 8%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header .sub-tag {
+            color: var(--accent-orange);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cards-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card-dark {
+            background: var(--bg-card-dark);
+            color: var(--text-light);
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+
+        .card-light {
+            background: var(--bg-card-light);
+            color: var(--text-dark);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .card-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 126, 41, 0.15);
+            color: var(--accent-orange);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .card-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .card-list li i {
+            color: var(--accent-orange);
+        }
+
+        /* Features/Why Us Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .features-grid-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background-color: var(--bg-dark);
+            padding: 6rem 8%;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: var(--bg-card-dark);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .price-card.featured {
+            background: var(--accent-orange);
+            color: #fff;
+            border: none;
+        }
+
+        .price-card.featured .card-list li i {
+            color: #fff;
+        }
+
+        .pill {
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Contact Section */
+        .contact-cta {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding: 6rem 1rem;
+            text-align: center;
+        }
+
+        footer {
+            padding: 2rem 8%;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links a {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-grid-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Irisium Technicals</div>
+        <div class="nav-actions">
+            <!-- Replace YOUR_PHONE_NUMBER with your actual WhatsApp phone number including country code (e.g. 919876543210) -->
+            <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Irisium%20Technicals,%20I'd%20like%20a%20free%20consultation." class="btn-secondary">
+                <i class="fa-brands font-awesome-icon fa-whatsapp"></i> Free Consultation
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="badge">
+            <i class="fa-solid fa-bolt"></i> High-Impact Technical & Growth Solutions
+        </div>
+        <h1>Irisium Technicals</h1>
+        <p>We deploy robust technical infrastructure and digital growth strategies that get results. No bloat, no fluff — pure execution.</p>
+        
+        <div class="cta-group">
+            <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi,%20I%20want%20to%20learn%20more%20about%20your%20services." class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp — It's Free
+            </a>
+            <a href="#services" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 600;">See how it works &rarr;</a>
+        </div>
+
+        <div class="social-proof">
+            <span>Direct access to specialized technical execution.</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="light-section" id="services">
+        <div class="section-header">
+            <div class="sub-tag">WHAT WE DO</div>
+            <h2>Two ways we elevate your operations</h2>
+            <p style="color: var(--text-muted);">We keep it direct. Custom tailored architectures built specifically for your scale.</p>
+        </div>
+
+        <div class="cards-grid-2">
+            <!-- Service Card 1 -->
+            <div class="card-dark">
+                <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Infrastructure & Systems</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Deployments, endpoint configurations, and automated technical workflows built to scale smoothly.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-circle-check"></i> End-to-end environment setups</li>
+                    <li><i class="fa-solid fa-circle-check"></i> System automation & script deployment</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Enterprise tool integration</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Ongoing technical monitoring</li>
+                </ul>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="card-light">
+                <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Growth Strategy & Media</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Precision social strategy, brand building, and outreach designed to convert high-value leads.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Content architecture & strategy</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Target audience positioning</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Brand media management</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Performance analytics & reports</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators Section -->
+    <section class="light-section" style="background-color: #f7f5f0; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="features-grid">
+            <div>
+                <div class="sub-tag" style="color: var(--accent-orange); font-weight: 700; margin-bottom: 0.5rem;">WHY IRISIUM TECHNICALS</div>
+                <h2 style="font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">Not an agency queue. A dedicated engineering partner.</h2>
+                <p style="color: var(--text-muted);">Traditional agencies pass you down to junior interns. We offer zero-proxy engineering and direct execution focused purely on speed, security, and measurable conversion.</p>
+            </div>
+
+            <div class="features-grid-cards">
+                <div class="card-light">
+                    <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h4 style="margin-bottom: 0.5rem;">Direct Support</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Speak directly with the engineers running your stack.</p>
+                </div>
+                <div class="card-dark">
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4 style="margin-bottom: 0.5rem;">Transparent Scope</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Clear timelines, upfront pricing, zero hidden lock-ins.</p>
+                </div>
+                <div class="card-light">
+                    <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
+                    <h4 style="margin-bottom: 0.5rem;">Hands-on Control</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Agile setups tailored exactly around your workflow.</p>
+                </div>
+                <div class="card-dark">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h4 style="margin-bottom: 0.5rem;">Results-First</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Built around reliability, uptime, and real ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="section-header">
+            <div class="sub-tag">PRICING</div>
+            <h2 style="color: #fff;">Clear engagement models</h2>
+            <p style="color: var(--text-muted);">Choose an arrangement that matches your operational scope.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <span class="pill" style="color: var(--accent-orange); border: 1px solid var(--accent-orange);">One-Time</span>
+                <h3 style="margin: 1rem 0 0.5rem;">Initial Setup</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Infrastructure audit, initial deployment, and environment setup.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-circle-check"></i> System Configuration</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Workflow Audit</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Deployment Documentation</li>
+                </ul>
+            </div>
+
+            <div class="price-card featured">
+                <span class="pill">Monthly</span>
+                <h3 style="margin: 1rem 0 0.5rem;">Retainer & Support</h3>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-bottom: 1.5rem;">Continuous management, optimization, and strategy execution.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Continuous Optimization</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Regular Performance Reports</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Direct Strategy Calls</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <span class="pill" style="color: var(--accent-orange); border: 1px solid var(--accent-orange);">Custom</span>
+                <h3 style="margin: 1rem 0 0.5rem;">Project Scale</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Tailored scopes for complex technical systems and scaling needs.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Dedicated Engineering</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Scalable Infrastructure</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Priority SLA Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="contact-cta">
+        <div class="badge" style="background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.3); color: var(--whatsapp-green);">
+            <i class="fa-regular fa-clock"></i> Response within a few hours
+        </div>
+        <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">Ready to scale your business?</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem;">Send us a message on WhatsApp for a direct consultation. We'll break down your needs and outline a clear action plan.</p>
+        
+        <!-- Replace YOUR_PHONE_NUMBER with your actual WhatsApp phone number -->
+        <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Irisium%20Technicals,%20I'm%20ready%20to%20discuss%20a%20project." class="btn-whatsapp" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+            <i class="fa-brands fa-whatsapp"></i> Message us on WhatsApp
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <strong>Irisium Technicals</strong> &copy; 2026. All rights reserved.
+        </div>
+        <div class="social-links">
+            <!-- Replace INSTAGRAM_USERNAME with your handle -->
+            <a href="https://instagram.com/INSTAGRAM_USERNAME" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <!-- Replace YOUR_PHONE_NUMBER with your WhatsApp number -->
+            <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
